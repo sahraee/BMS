@@ -25,8 +25,7 @@ namespace BMS.Api.Controllers
         /// <param name="bookId">Book identity</param>
         /// <returns>Information of a book</returns>
         /// <response code="200">Book detail</response>
-        /// <response code="400">Bad request</response>
-
+        /// <response code="400">Book not found or parameter incorrect</response>
         [HttpGet("{bookId}")]
         public async Task<ActionResult<ResultSetDto<BookDetailDtoModel>>> GetBook(string bookId)
         {
@@ -78,7 +77,7 @@ namespace BMS.Api.Controllers
         /// <param name="request">Data is a type of BookEditDtoModel object</param>
         /// <returns>The edited book information is returned</returns>
         /// <response code="200">Book detail</response>
-        /// <response code="400">Bad request</response>
+        /// <response code="400">Book not found or parameters incorrect</response>
         [HttpPut]
         public async Task<ActionResult<ResultSetDto<BookEditDtoModel>>> EditBook([FromBody] BookEditDtoModel request)
         {
@@ -143,7 +142,7 @@ namespace BMS.Api.Controllers
         /// <param name="request">Data is a type of BookNewDtoModel object</param>
         /// <returns>The added book information is returned</returns>
         /// <response code="200">Book detail</response>
-        /// <response code="400">Bad request</response>
+        /// <response code="400">Book duplicate data or parameter incorrect</response>
         [HttpPost]
         public async Task<ActionResult<ResultSetDto<BookDetailDtoModel>>> AddBook([FromBody] BookNewDtoModel request)
         {
@@ -211,7 +210,7 @@ namespace BMS.Api.Controllers
         /// <param name="bookId">Identity</param>
         /// <returns>Delete result returned</returns>
         /// <response code="200">true</response>
-        /// <response code="400">Bad request</response>
+        /// <response code="400">Book not found or parameter incorrect</response>
         [HttpDelete]
         public async Task<ActionResult<ResultSetDto>> DeleteBook(string bookId)
         {
