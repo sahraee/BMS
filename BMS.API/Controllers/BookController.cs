@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BMS.Application.Interfaces;
-using BMS.Application.Result;
 using BMS.Domain.Models.Book;
 using BMS.DTO.DTOModels.Result;
 using BMS.DTO.DTOModels.Book;
-using BMS.Domain;
-using System.Net;
+ 
 
 namespace BMS.Api.Controllers
 {

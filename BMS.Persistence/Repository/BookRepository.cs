@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BMS.Domain.Interfaces;
+﻿using BMS.Domain.Interfaces;
 using BMS.Domain.Models.Book;
 using BMS.Persistence.Contexts;
 
